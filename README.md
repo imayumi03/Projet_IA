@@ -66,15 +66,15 @@ Output : probabilité de prédiction + classe prédite
 
 4. Enregistrement / chargement du modèle
 
-# Sauvegarde
+Sauvegarde : 
 torch.save(model.state_dict(), 'model.pt')
 
-# Chargement
+Chargement :
 model.load_state_dict(torch.load('model.pt'))
 model.eval()
 
-📊 Auteurs & Licence
+#   📊 Auteur & Licence
 
-Projet réalisé dans le cadre du module Intelligence Artificielle et Industrie 4.0.
+Projet réalisé dans le cadre du module Intelligence Artificielle et Industrie 4.0 par Mounia Abdelmoumni.
 
 Licence : MIT
