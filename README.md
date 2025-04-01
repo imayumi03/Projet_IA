@@ -34,4 +34,47 @@ Accuracy : 98.62%
 F1-score classe 1 : 98.62%
 AUC ROC : 0.9987
 
+# 🚀 API Flask & Instructions
 
+1. Structure du projet
+
+project/
+|-- app.py
+|-- model.pt
+|-- scaler.pkl
+|-- requirements.txt
+|-- README.md
+
+2. Lancer l’API Flask
+
+pip install -r requirements.txt
+python app.py
+
+3. Utilisation de l’API
+
+Endpoint : POST /predict
+
+Input : JSON contenant un tableau features de taille (10, nb_features)
+
+Exemple :
+
+{
+  "features": [[...], [...], ..., [...]]
+}
+
+Output : probabilité de prédiction + classe prédite
+
+4. Enregistrement / chargement du modèle
+
+# Sauvegarde
+torch.save(model.state_dict(), 'model.pt')
+
+# Chargement
+model.load_state_dict(torch.load('model.pt'))
+model.eval()
+
+📊 Auteurs & Licence
+
+Projet réalisé dans le cadre du module Intelligence Artificielle et Industrie 4.0.
+
+Licence : MIT
