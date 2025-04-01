@@ -2,12 +2,12 @@
 
 ## 👤 Réalisé par
 
-- **Nom :** [Ton Nom]
-- **Prénom :** [Ton Prénom]
+- **Nom :** Abdelmoumni
+- **Prénom :** Mounia
 
 ## 🧠 Objectif du projet
 
-Développer une solution d'intelligence artificielle pour prédire les arrêts de protection du cobot UR3 à partir des données capteurs temporelles. Le modèle doit anticiper un arrêt à partir des 10 dernières unités de temps.
+Développer un modèle de ML\DL pour prédire les arrêts de protection du cobot UR3 à partir des données capteurs temporelles. Le modèle doit anticiper un arrêt à partir des 10 dernières unités de temps.
 
 ---
 
@@ -67,7 +67,7 @@ Développer une solution d'intelligence artificielle pour prédire les arrêts d
   - ROC-AUC
   - Courbes ROC, matrice de confusion
 
-### 🌐 6. Création d’une API Flask
+## 🌐 Création d’une API Flask
 
 - API REST avec route `/predict`
 - Entrée : JSON contenant une séquence temporelle
