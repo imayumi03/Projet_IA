@@ -1,80 +1,77 @@
-# Projet_IA
-Ce projet a pour objectif de prédire les arrêts de protection d’un robot collaboratif UR3 à partir de données temporelles multivariées issues de capteurs.
+# 🤖 Prédiction des Arrêts de Protection d’un Cobot UR3
 
-# 🔧 Méthodologie adoptée
-1. Exploration et prétraitement des données
-Chargement des données UR3 depuis le jeu de données UR3 CobotOps.
-Nettoyage : suppression des lignes contenant des valeurs manquantes.
-Conversion de la colonne Timestamp en datetime avec vérification de l'ordre temporel.
-Normalisation des variables numériques via StandardScaler.
+## 👤 Réalisé par
 
-2. Équilibrage des classes avec SMOTE
-Le dataset initial était fortement déséquilibré (classe 1 = ~4%).
-Utilisation de la méthode SMOTE pour sur-échantillonner la classe minoritaire avant la création des séquences temporelles.
+- **Nom :** [Ton Nom]
+- **Prénom :** [Ton Prénom]
 
-3. Construction des séquences temporelles
-Utilisation d’une fenêtre glissante de taille 10 pour transformer les données tabulaires en séquences compatibles avec les RNN (LSTM, GRU).
+## 🧠 Objectif du projet
 
-4. Division du dataset
-Séparation en 80% train / 20% test avec stratify=y pour maintenir la répartition des classes.
+Développer une solution d'intelligence artificielle pour prédire les arrêts de protection du cobot UR3 à partir des données capteurs temporelles. Le modèle doit anticiper un arrêt à partir des 10 dernières unités de temps.
 
-🧳️ Modèles et hyperparamètres testés
+---
 
-1. LSTM
-hidden_size = 64, num_layers = 2, dropout = 0.3, batch_size = 64, lr = 0.001
-Perte : BCEWithLogitsLoss()
-Entraînement sur 20 époques
+## 🧪 Méthodologie Adoptée
 
-2. Comparaison avec LSTM + pos_weight (sans SMOTE)
-Moins performant : recall faible pour la classe 1
-Meilleure précision mais détection partielle des arrêts
+### 📊 1. Analyse exploratoire et statistique des données
 
-3. Performance finale (avec SMOTE)
-Accuracy : 98.62%
-F1-score classe 1 : 98.62%
-AUC ROC : 0.9987
+- Chargement des données depuis [UCI Repository](https://archive.ics.uci.edu/dataset/963/ur3+cobotops)
+- Analyse descriptive :
+  - Moyenne, médiane, écart-type, min/max
+  - Corrélations via heatmap
+- Visualisations :
+  - Histogrammes
+  - Boxplots pour détection des outliers
+  - Séries temporelles
+  - PCA pour visualisation des clusters
 
-# 🚀 API Flask & Instructions
+### 🧹 2. Prétraitement des données
 
-1. Structure du projet
+- Traitement des valeurs manquantes (imputation ou suppression)
+- Détection et traitement des outliers (méthodes IQR, Z-score)
+- Normalisation des données (MinMaxScaler, StandardScaler)
+- Génération de séquences temporelles de taille 10
+- Création de labels binaires pour classification
+- Séparation en `train`, `validation` et `test`
 
-project/
-|-- app.py
-|-- model.pt
-|-- scaler.pkl
-|-- requirements.txt
-|-- README.md
+### 🤖 3. Modélisation avec LSTM
 
-2. Lancer l’API Flask
+- Architecture du modèle :
+  - Couches LSTM ou Bidirectional LSTM
+  - Dropout pour régularisation
+  - Dense avec activation `sigmoid`
+- Compilation :
+  - Perte : `binary_crossentropy`
+  - Optimiseur : `Adam`
+  - Métriques : `accuracy`, `recall`, `precision`, `AUC`
 
-pip install -r requirements.txt
-python app.py
+### ⚙️ 4. Optimisation des hyperparamètres
 
-3. Utilisation de l’API
+- Recherche par `Grid Search` ou `Random Search`
+- Paramètres testés :
+  - Nombre de neurones LSTM
+  - Taille de batch
+  - Taux de dropout
+  - Nombre d’époques
+  - Learning rate
+- Visualisation avec `Matplotlib` des courbes d'entraînement/validation
 
-Endpoint : POST /predict
+### 🔄 5. Comparaison avec d'autres modèles
 
-Input : JSON contenant un tableau features de taille (10, nb_features)
+- Modèles alternatifs :
+  - SARIMA (pour séries univariées)
+  - Random Forest
+  - XGBoost / LightGBM
+- Évaluation par :
+  - Accuracy, precision, recall, F1-score
+  - ROC-AUC
+  - Courbes ROC, matrice de confusion
 
-Exemple :
+### 🌐 6. Création d’une API Flask
 
-{
-  "features": [[...], [...], ..., [...]]
-}
-
-Output : probabilité de prédiction + classe prédite
-
-4. Enregistrement / chargement du modèle
-
-Sauvegarde : 
-torch.save(model.state_dict(), 'model.pt')
-
-Chargement :
-model.load_state_dict(torch.load('model.pt'))
-model.eval()
-
-#   📊 Auteur & Licence
-
-Projet réalisé dans le cadre du module Intelligence Artificielle et Industrie 4.0 par Mounia Abdelmoumni.
-
-Licence : MIT
+- API REST avec route `/predict`
+- Entrée : JSON contenant une séquence temporelle
+- Sortie : Probabilité d’un arrêt de protection
+- Exemple :
+  ```bash
+  curl -X POST http://localhost:5000/predict -H "Content-Type: application/json" -d '{"sequence": [...]}'
