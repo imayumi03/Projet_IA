@@ -59,13 +59,12 @@ Développer un modèle de ML\DL pour prédire les arrêts de protection du cobot
 ### 🔄 5. Comparaison avec d'autres modèles
 
 - Modèles alternatifs :
-  - SARIMA (pour séries univariées)
   - Random Forest
   - XGBoost / LightGBM
 - Évaluation par :
   - Accuracy, precision, recall, F1-score
   - ROC-AUC
-  - Courbes ROC, matrice de confusion
+  - Courbes ROC
 
 ## 🌐 Création d’une API Flask  
 Pré-requis :  
