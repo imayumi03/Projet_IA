@@ -79,9 +79,9 @@ Cela démarre un serveur local sur : http://127.0.0.1:5000
 Le JSON envoyé doit contenir une clé "sequence"  
 avec une liste de vecteurs de dimension (window_size, input_size) ( 10 lignes × 18 colonnes)  
 ` {
-  "sequence": [
-    [0.1, 0.2, ..., 0.9],
-    [0.3, 0.4, ..., 0.8],
+  "sequence": [  
+    [0.1, 0.2, ..., 0.9],  
+    [0.3, 0.4, ..., 0.8],  
     ...
   ]
 } `
