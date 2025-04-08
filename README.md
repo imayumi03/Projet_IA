@@ -28,7 +28,7 @@ Développer un modèle de ML\DL pour prédire les arrêts de protection du cobot
 ### 🧹 2. Prétraitement des données
 
 - Traitement des valeurs manquantes (imputation ou suppression)
-- Détection et traitement des outliers (méthodes IQR, Z-score)
+- Détection des outliers
 - Normalisation des données (MinMaxScaler, StandardScaler)
 - Génération de séquences temporelles de taille 10
 - Création de labels binaires pour classification
@@ -67,11 +67,31 @@ Développer un modèle de ML\DL pour prédire les arrêts de protection du cobot
   - ROC-AUC
   - Courbes ROC, matrice de confusion
 
-## 🌐 Création d’une API Flask
+## 🌐 Création d’une API Flask  
+Pré-requis :  
+- Python ≥ 3.7  
+- Bibliothèques : flask, torch, numpy  
+- Fichiers nécessaires :` app.py`, `model.py`, `lstm_trained.pth`  
 
-- API REST avec route `/predict`
-- Entrée : JSON contenant une séquence temporelle
-- Sortie : Probabilité d’un arrêt de protection
-- Exemple :
-  ```bash
-  curl -X POST http://localhost:5000/predict -H "Content-Type: application/json" -d '{"sequence": [...]}'
+1- Lancer l’API : ` python app.p`  
+Cela démarre un serveur local sur : http://127.0.0.1:5000  
+
+2- Faire une requête POST à /predict :  
+Le JSON envoyé doit contenir une clé "sequence"  
+avec une liste de vecteurs de dimension (window_size, input_size) ( 10 lignes × 18 colonnes)  
+` {
+  "sequence": [
+    [0.1, 0.2, ..., 0.9],
+    [0.3, 0.4, ..., 0.8],
+    ...
+  ]
+} `
+
+3- Tester avec curl :  
+` curl -X POST http://127.0.0.1:5000/predict \  
+  -H "Content-Type: application/json" \  
+  -d @test_input.json `
+
+4- Erreurs courantes à éviter :  
+`"KeyError: 'sequence'"` → la clé "sequence" est manquante dans le JSON  
+`shape mismatch` → la séquence ne respecte pas la forme (10, 18)  
