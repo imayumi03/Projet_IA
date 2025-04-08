@@ -1,0 +1,65 @@
+Requirement already satisfied: wandb in c:\users\lenovo gaming\anaconda3\envs\deep_hedging\lib\site-packages (0.19.8)
+Requirement already satisfied: click!=8.0.0,>=7.1 in c:\users\lenovo gaming\anaconda3\envs\deep_hedging\lib\site-packages (from wandb) (8.1.7)
+Requirement already satisfied: docker-pycreds>=0.4.0 in c:\users\lenovo gaming\anaconda3\envs\deep_hedging\lib\site-packages (from wandb) (0.4.0)
+Requirement already satisfied: eval-type-backport in c:\users\lenovo gaming\anaconda3\envs\deep_hedging\lib\site-packages (from wandb) (0.2.2)
+Requirement already satisfied: gitpython!=3.1.29,>=1.0.0 in c:\users\lenovo gaming\anaconda3\envs\deep_hedging\lib\site-packages (from wandb) (3.1.43)
+Requirement already satisfied: platformdirs in c:\users\lenovo gaming\anaconda3\envs\deep_hedging\lib\site-packages (from wandb) (4.3.6)
+Requirement already satisfied: protobuf!=4.21.0,!=5.28.0,<6,>=3.19.0 in c:\users\lenovo gaming\anaconda3\envs\deep_hedging\lib\site-packages (from wandb) (3.19.6)
+Requirement already satisfied: psutil>=5.0.0 in c:\users\lenovo gaming\anaconda3\envs\deep_hedging\lib\site-packages (from wandb) (5.9.5)
+Requirement already satisfied: pydantic<3,>=2.6 in c:\users\lenovo gaming\anaconda3\envs\deep_hedging\lib\site-packages (from wandb) (2.10.6)
+Requirement already satisfied: pyyaml in c:\users\lenovo gaming\anaconda3\envs\deep_hedging\lib\site-packages (from wandb) (6.0.2)
+Requirement already satisfied: requests<3,>=2.0.0 in c:\users\lenovo gaming\anaconda3\envs\deep_hedging\lib\site-packages (from wandb) (2.32.3)
+Requirement already satisfied: sentry-sdk>=2.0.0 in c:\users\lenovo gaming\anaconda3\envs\deep_hedging\lib\site-packages (from wandb) (2.23.1)
+Requirement already satisfied: setproctitle in c:\users\lenovo gaming\anaconda3\envs\deep_hedging\lib\site-packages (from wandb) (1.3.5)
+Requirement already satisfied: setuptools in c:\users\lenovo gaming\anaconda3\envs\deep_hedging\lib\site-packages (from wandb) (75.1.0)
+Requirement already satisfied: typing-extensions<5,>=4.4 in c:\users\lenovo gaming\anaconda3\envs\deep_hedging\lib\site-packages (from wandb) (4.12.2)
+Requirement already satisfied: colorama in c:\users\lenovo gaming\anaconda3\envs\deep_hedging\lib\site-packages (from click!=8.0.0,>=7.1->wandb) (0.4.6)
+Requirement already satisfied: six>=1.4.0 in c:\users\lenovo gaming\anaconda3\envs\deep_hedging\lib\site-packages (from docker-pycreds>=0.4.0->wandb) (1.17.0)
+Requirement already satisfied: gitdb<5,>=4.0.1 in c:\users\lenovo gaming\anaconda3\envs\deep_hedging\lib\site-packages (from gitpython!=3.1.29,>=1.0.0->wandb) (4.0.7)
+Requirement already satisfied: annotated-types>=0.6.0 in c:\users\lenovo gaming\anaconda3\envs\deep_hedging\lib\site-packages (from pydantic<3,>=2.6->wandb) (0.7.0)
+Requirement already satisfied: pydantic-core==2.27.2 in c:\users\lenovo gaming\anaconda3\envs\deep_hedging\lib\site-packages (from pydantic<3,>=2.6->wandb) (2.27.2)
+Requirement already satisfied: charset-normalizer<4,>=2 in c:\users\lenovo gaming\anaconda3\envs\deep_hedging\lib\site-packages (from requests<3,>=2.0.0->wandb) (3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in c:\users\lenovo gaming\anaconda3\envs\deep_hedging\lib\site-packages (from requests<3,>=2.0.0->wandb) (3.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in c:\users\lenovo gaming\anaconda3\envs\deep_hedging\lib\site-packages (from requests<3,>=2.0.0->wandb) (1.26.19)
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\lenovo gaming\anaconda3\envs\deep_hedging\lib\site-packages (from requests<3,>=2.0.0->wandb) (2025.1.31)
+Requirement already satisfied: smmap<5,>=3.0.1 in c:\users\lenovo gaming\anaconda3\envs\deep_hedging\lib\site-packages (from gitdb<5,>=4.0.1->gitpython!=3.1.29,>=1.0.0->wandb) (4.0.0)
+Epoch 5 - Loss: 0.6754
+Epoch 10 - Loss: 0.6505
+Epoch 15 - Loss: 0.6237
+Epoch 20 - Loss: 0.5905
+Epoch 25 - Loss: 0.5445
+Epoch 30 - Loss: 0.4800
+Epoch 35 - Loss: 0.4024
+Epoch 40 - Loss: 0.3360
+Epoch 45 - Loss: 0.2979
+Epoch 50 - Loss: 0.2628
+Epoch 55 - Loss: 0.2214
+Epoch 60 - Loss: 0.1906
+Epoch 65 - Loss: 0.1673
+Epoch 70 - Loss: 0.1478
+Epoch 75 - Loss: 0.1332
+Epoch 80 - Loss: 0.1208
+Epoch 85 - Loss: 0.1119
+Epoch 90 - Loss: 0.1059
+Epoch 95 - Loss: 0.1013
+Epoch 100 - Loss: 0.0979
+Epoch 105 - Loss: 0.0951
+Epoch 110 - Loss: 0.0925
+Epoch 115 - Loss: 0.0905
+Epoch 120 - Loss: 0.0888
+Epoch 125 - Loss: 0.0873
+Epoch 130 - Loss: 0.0860
+Epoch 135 - Loss: 0.0848
+Epoch 140 - Loss: 0.0837
+Epoch 145 - Loss: 0.0826
+Epoch 150 - Loss: 0.0816
+Epoch 155 - Loss: 0.0806
+Epoch 160 - Loss: 0.0796
+Epoch 165 - Loss: 0.0786
+Epoch 170 - Loss: 0.0777
+Epoch 175 - Loss: 0.0768
+Epoch 180 - Loss: 0.0759
+Epoch 185 - Loss: 0.0750
+Epoch 190 - Loss: 0.0741
+Epoch 195 - Loss: 0.0732
+Epoch 200 - Loss: 0.0723

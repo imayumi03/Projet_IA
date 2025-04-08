@@ -1,0 +1,22 @@
+{"time":"2025-04-08T10:49:17.3000741+01:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"c:\\Users\\Lenovo Gaming\\OneDrive\\Documents\\GitHub\\Projet_IA\\wandb\\run-20250408_104917-6pi6v9rx\\logs\\debug-core.log"}
+{"time":"2025-04-08T10:49:18.8645788+01:00","level":"INFO","msg":"created new stream","id":"6pi6v9rx"}
+{"time":"2025-04-08T10:49:18.8645788+01:00","level":"INFO","msg":"stream: started","id":"6pi6v9rx"}
+{"time":"2025-04-08T10:49:18.8645788+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"6pi6v9rx"}
+{"time":"2025-04-08T10:49:18.8645788+01:00","level":"INFO","msg":"sender: started","stream_id":"6pi6v9rx"}
+{"time":"2025-04-08T10:49:18.8645788+01:00","level":"INFO","msg":"handler: started","stream_id":"6pi6v9rx"}
+{"time":"2025-04-08T10:49:19.7018217+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-08T10:49:21.2391319+01:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-08T10:49:21.2500224+01:00","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-08T10:49:21.2564988+01:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-08T10:49:22.6005271+01:00","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-08T10:49:24.5566598+01:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-04-08T10:49:33.8763308+01:00","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-04-08T10:49:40.3885433+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-04-08T10:49:40.390303+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-04-08T10:49:41.1361324+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-04-08T10:49:41.4009703+01:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading summary, console lines 25-64","runtime_seconds":0.2630345}],"total_operations":1}}
+{"time":"2025-04-08T10:49:41.5327911+01:00","level":"INFO","msg":"stream: closing","id":"6pi6v9rx"}
+{"time":"2025-04-08T10:49:41.5327911+01:00","level":"INFO","msg":"sender: closed","stream_id":"6pi6v9rx"}
+{"time":"2025-04-08T10:49:41.5333201+01:00","level":"INFO","msg":"handler: closed","stream_id":"6pi6v9rx"}
+{"time":"2025-04-08T10:49:41.5338783+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"6pi6v9rx"}
+{"time":"2025-04-08T10:49:41.5338783+01:00","level":"INFO","msg":"stream: closed","id":"6pi6v9rx"}
