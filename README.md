@@ -60,7 +60,7 @@ Développer un modèle de ML\DL pour prédire les arrêts de protection du cobot
 
 - Modèles alternatifs :
   - Random Forest
-  - XGBoost / LightGBM
+  - XGBoost  
 - Évaluation par :
   - Accuracy, precision, recall, F1-score
   - ROC-AUC
